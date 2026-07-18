@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Visitor Gate Pass System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo"> Gate<span>Pass</span></div>
+        <div class="menu">
+            <a href="index.html">Login</a>
+        </div>
+    </nav>
+</header>
+
+<section class="auth-section">
+    <div class="auth-box">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Register to manage visitor entries</p>
+
+        <form id="registerForm">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number" required>
+
+            <label for="role">Role</label>
+            <select id="role" required>
+                <option value="">-- Select Role --</option>
+                <option value="Security Guard">Security Guard</option>
+                <option value="Admin">Admin</option>
+                <option value="Receptionist">Receptionist</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Create a password" required>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <p id="msg" class="msg"></p>
+
+        <p class="switch-link">Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Visitor Gate Pass System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

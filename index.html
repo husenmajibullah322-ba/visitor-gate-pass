@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Visitor Gate Pass System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo"> Gate<span>Pass</span></div>
+        <div class="menu">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+</header>
+
+<section class="auth-section">
+    <div class="auth-box">
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Login to access the dashboard</p>
+
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p id="msg" class="msg"></p>
+
+        <p class="switch-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Visitor Gate Pass System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

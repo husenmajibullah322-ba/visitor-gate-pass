@@ -1,0 +1,335 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f8;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#1a1a2e;
+}
+
+.logo span{
+color:#e94560;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#1a1a2e;
+font-weight:bold;
+padding:8px 16px;
+border-radius:5px;
+transition:background .2s;
+}
+
+.menu a:hover{
+background:#f0f0f0;
+}
+
+.welcome-text{
+color:#555;
+font-weight:bold;
+}
+
+/* Auth pages (Login/Register) */
+
+.auth-section{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
+}
+
+.auth-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,.08);
+width:100%;
+max-width:420px;
+}
+
+.auth-box h2{
+margin-bottom:5px;
+color:#1a1a2e;
+}
+
+.auth-subtitle{
+color:#777;
+margin-bottom:25px;
+font-size:14px;
+}
+
+.auth-box form{
+display:flex;
+flex-direction:column;
+}
+
+.auth-box label{
+margin-top:15px;
+margin-bottom:5px;
+font-size:14px;
+font-weight:bold;
+color:#333;
+}
+
+.auth-box input,
+.auth-box select{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+.auth-box input:focus,
+.auth-box select:focus{
+outline:none;
+border-color:#e94560;
+}
+
+.btn{
+margin-top:25px;
+padding:12px;
+background:#e94560;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+text-align:center;
+display:inline-block;
+transition:background .2s;
+}
+
+.btn:hover{
+background:#c23150;
+}
+
+.msg{
+margin-top:15px;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+}
+
+.msg.success{
+color:#0c831f;
+}
+
+.msg.error{
+color:#e94560;
+}
+
+.switch-link{
+margin-top:20px;
+text-align:center;
+font-size:14px;
+color:#555;
+}
+
+.switch-link a{
+color:#e94560;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* Dashboard */
+
+.dashboard-section{
+flex:1;
+padding:40px 50px;
+}
+
+.dashboard-section h2{
+margin-bottom:20px;
+color:#1a1a2e;
+}
+
+.gatepass-form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group label{
+margin-bottom:6px;
+font-size:14px;
+font-weight:bold;
+color:#333;
+}
+
+.form-group input,
+.form-group select{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+outline:none;
+border-color:#e94560;
+}
+
+/* Gate Pass Preview Card */
+
+.pass-preview{
+margin-top:30px;
+}
+
+.pass-preview.hidden{
+display:none;
+}
+
+.pass-card{
+background:white;
+max-width:400px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+overflow:hidden;
+border:2px dashed #e94560;
+}
+
+.pass-header{
+background:#1a1a2e;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.pass-header h3{
+font-size:18px;
+}
+
+.pass-id{
+font-size:12px;
+background:#e94560;
+padding:4px 8px;
+border-radius:4px;
+}
+
+.pass-body{
+padding:20px;
+}
+
+.pass-body p{
+margin-bottom:10px;
+font-size:14px;
+color:#333;
+}
+
+.pass-status{
+margin-top:15px;
+font-weight:bold;
+color:#0c831f;
+font-size:15px;
+}
+
+/* Visitor Table */
+
+.visitor-list-heading{
+margin-top:40px;
+}
+
+.table-wrapper{
+background:white;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+padding:20px;
+margin-top:20px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th, td{
+text-align:left;
+padding:12px 10px;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+th{
+color:#777;
+text-transform:uppercase;
+font-size:12px;
+letter-spacing:.5px;
+}
+
+.no-data{
+text-align:center;
+color:#999;
+padding:20px;
+display:none;
+}
+
+/* Footer */
+
+footer{
+background:#1a1a2e;
+color:white;
+text-align:center;
+padding:18px;
+font-size:14px;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+.navbar{
+    padding:15px 20px;
+    flex-direction:column;
+    gap:10px;
+}
+
+.dashboard-section{
+    padding:30px 20px;
+}
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Visitor Gate Pass System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo"> Gate<span>Pass</span></div>
+        <div class="menu">
+            <span id="welcomeUser" class="welcome-text"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<section class="dashboard-section">
+    <h2>New Visitor Entry</h2>
+
+    <form id="gatePassForm" class="gatepass-form">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="vname">Visitor Name</label>
+                <input type="text" id="vname" placeholder="Full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vmobile">Mobile Number</label>
+                <input type="tel" id="vmobile" placeholder="10-digit number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vpurpose">Purpose of Visit</label>
+                <select id="vpurpose" required>
+                    <option value="">-- Select --</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Delivery">Delivery</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Personal">Personal Visit</option>
+                    <option value="Maintenance">Maintenance/Service</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vmeet">Whom to Meet</label>
+                <input type="text" id="vmeet" placeholder="Person / Department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vdate">Date</label>
+                <input type="date" id="vdate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vtime">Time In</label>
+                <input type="time" id="vtime" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Generate Gate Pass</button>
+    </form>
+
+    <div id="passPreview" class="pass-preview hidden">
+        <div class="pass-card">
+            <div class="pass-header">
+                <h3>Visitor Gate Pass</h3>
+                <span class="pass-id" id="passId"></span>
+            </div>
+            <div class="pass-body">
+                <p><strong>Name:</strong> <span id="passName"></span></p>
+                <p><strong>Mobile:</strong> <span id="passMobile"></span></p>
+                <p><strong>Purpose:</strong> <span id="passPurpose"></span></p>
+                <p><strong>Meeting:</strong> <span id="passMeet"></span></p>
+                <p><strong>Date:</strong> <span id="passDate"></span></p>
+                <p><strong>Time In:</strong> <span id="passTime"></span></p>
+                <p class="pass-status">✅ Approved</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="visitor-list-heading">Today's Visitor Log</h2>
+
+    <div class="table-wrapper">
+        <table id="visitorTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Purpose</th>
+                    <th>Meeting</th>
+                    <th>Date</th>
+                    <th>Time In</th>
+                </tr>
+            </thead>
+            <tbody id="visitorTableBody">
+                <!-- visitor rows injected here -->
+            </tbody>
+        </table>
+        <p id="noVisitors" class="no-data">No visitors logged yet.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Visitor Gate Pass System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
