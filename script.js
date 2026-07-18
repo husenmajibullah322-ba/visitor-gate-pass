@@ -19,7 +19,7 @@ if(registerForm){
         document.getElementById("msg").className = "msg success";
 
         setTimeout(function(){
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         }, 1200);
     });
 }
@@ -54,7 +54,7 @@ if(gatePassForm){
     /* Protect dashboard - redirect to login if not logged in */
     const isLoggedIn = localStorage.getItem("gatepass_loggedin");
     if(isLoggedIn !== "true"){
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 
     /* Show welcome message */
@@ -142,6 +142,6 @@ if(logoutBtn){
     logoutBtn.addEventListener("click", function(e){
         e.preventDefault();
         localStorage.removeItem("gatepass_loggedin");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 }
